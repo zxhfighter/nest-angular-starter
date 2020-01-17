@@ -1,7 +1,17 @@
 {
   "name": "root",
   "private": true,
+  "scripts": {
+    "start": "lerna run --stream start",
+    "build": "lerna run --stream --concurrency 1 --sort build",
+    "clean": "lerna run --stream clean",
+    "bootstrap": "lerna bootstrap"
+  },
   "devDependencies": {
     "lerna": "^3.18.1"
-  }
+  },
+  "workspaces": [
+    "packages/backend",
+    "packages/frontend"
+  ]
 }
